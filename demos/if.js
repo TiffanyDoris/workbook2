@@ -1,4 +1,6 @@
-var numberOfkids = 4;
+"use strict";
+
+var numberOfKids = 4;
 var price;
 
 price = 19.99 * numberOfkids;
