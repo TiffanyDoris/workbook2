@@ -1,9 +1,24 @@
 "use strict";
 
 function add() {
-  var numberOne = 2000;
-  var numberTwo = 6050;
+  var numberOneInput = document.getElementById("numberOneInput");
+  var numberTwoInput = document.getElementById("numberTwoInput");
+
+  //   var numberOne = numberOneInput.value;
+  var numberOne = Number(numberOneInput.value);
+
+  //   var numberTwo = numberTwoInput.value;
+  var numberTwo = Number(numberTwoInput.value);
+
   var result = numberOne + numberTwo;
-  console.log(result);
+  var resultInput = document.getElementById("resultInput");
+  resultInput.value = result;
 }
-add();
+
+function init() {
+  var addButton = document.getElementById("addButton");
+  addButton.onclick = add;
+}
+
+//init();
+window.onload = init;
